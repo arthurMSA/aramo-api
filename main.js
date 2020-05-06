@@ -1,18 +1,15 @@
-require('dotenv/config')
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 const bodyParse = require('body-parser')
 const load = require('consign')
-
-const port = process.env.API_PORT
+const router = express.Router()
+const port = 3000
 
 const mongo = require('./database/connection')
 
 
 const app = express()
-
-load({cwd: 'src'}).include('controllers').then('routers').into(app)
 
 app.use(cors())
 app.use(morgan('dev'))
@@ -21,7 +18,11 @@ app.use(bodyParse.json())
 mongo()
 .on('error', console.log)
 .on('disconnected', mongo)
+
+load({cwd: 'src',}).include('routers').then('controllers').into(app)
+
 app.listen(port, () => console.log('API RODANDO NA PORTA ', port))
+
 
 module.exports = app
 
