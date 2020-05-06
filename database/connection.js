@@ -7,7 +7,7 @@ const options = {
     useUnifiedTopology: true,
     useFindAndModify: false
 }
-const uri = `${config.MONGODB_PROTOCOL}://${config.MONGODB_USER}:${config.MONGODB_PASS}@${config.MONGODB_HOST}:${config.MONGODB_PORT}/${config.MONGODB_DATABASE}?authSource=admin`
+const uri = 'mongodb+srv://root:root@cluster0-cvuam.mongodb.net/test?retryWrites=true&w=majority'
 
 module.exports = () => {
     mongoose.connect(uri, options).then(() => {
