@@ -1,18 +1,17 @@
 const mongoose = require('mongoose')
-
-const RegionSchema = new mongoose.Schema({
+const PlanSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
     },
-    state: {
-        type: String,
+    time: {
+        type: Number,
         required: true
     },
-    ddd: {
-        type: Number,
+    unitTime: {
+        type: String,
         required: true
     }
 })
 
-mongoose.model('Region', RegionSchema)
+mongoose.model('Plan', PlanSchema)
