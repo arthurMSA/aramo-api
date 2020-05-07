@@ -10,7 +10,7 @@ const RegionSchema = new mongoose.Schema({
         required: true
     },
     ddd: {
-        type: Number,
+        type: String,
         required: true
     }
 })
