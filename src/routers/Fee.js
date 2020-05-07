@@ -1,5 +1,5 @@
 module.exports = app => {
-    const router = 'api/fee'
+    const router = '/api/fee'
     app.post(router, async (req, res) =>{
         const Fee = app.controllers.FeeController
         res.send(await Fee.create(req.body))
