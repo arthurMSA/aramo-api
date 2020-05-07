@@ -1,17 +1,12 @@
 const CRUD = require('../interfaces/crud')('Region')
 module.exports = {
-    create: async (regions) => {
-        try {
-            return await CRUD.create(regions)
-        } catch (error) {
-            console.error(error)
-        }
+    create: async (fee) => {
+        return await CRUD.create(fee)
     },
     findAll: async () => {
-        try {
-            return await CRUD.find({})
-        } catch (error) {
-            console.error(error)
-        }
+        return await CRUD.findAll()
+    },
+    find: async(obj) => {
+        return await CRUD.find(obj)
     }
 }

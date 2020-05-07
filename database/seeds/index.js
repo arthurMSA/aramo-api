@@ -2,7 +2,6 @@ const seeder = require('mongoose-seed');
 const env = require('../../config/env')
 const data = require('./data')
 module.exports = () => {
-    seeder.connect(env.URL_MONGO_DB, function() {    
         seeder.loadModels([
             'src/models/Fee.js',
             'src/models/Region.js'
@@ -12,5 +11,5 @@ module.exports = () => {
                 seeder.disconnect();
             })
         })
-    })
+    
 }

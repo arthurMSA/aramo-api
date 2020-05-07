@@ -5,6 +5,7 @@ const bodyParse = require('body-parser')
 const load = require('consign')
 const router = express.Router()
 const port = 3000
+
 const mongoSeed = require('./database/seeds/')()
 const mongo = require('./database/connection')
 
@@ -17,6 +18,7 @@ app.use(bodyParse.json())
 mongo()
 .on('error', console.log)
 .on('disconnected', mongo)
+
 
 load({cwd: 'src',}).include('routers').then('controllers').into(app)
 

@@ -1,10 +1,19 @@
 module.exports = app => {
-    app.post('/plan', async (req, res) =>{
+    const router = 'api/plan'
+    app.post(router, async (req, res) =>{
         const Plan = app.controllers.PlanController
         res.send(await Plan.create(req.body))
     })
-    app.get('/plan', async (req, res) => {
+    app.get(router, async (req, res) => {
         const Plan = app.controllers.PlanController
-        res.send(await Plan.findAll())
+        if(req.params) {
+            res.send(await Plan.find(req.query))
+        } else {
+            res.send(await Plan.findAll())
+        }
+    })
+    app.post('/plan/calculation', async (req, res) => {
+        const Plan = app.controllers.PlanControllerr
+        res.send(await Plan.calculate(req.body))
     })
 }
