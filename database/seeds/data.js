@@ -1,5 +1,28 @@
 module.exports = [
     {
+        'model': 'Plan',
+        'documents': [
+            {
+                'name': 'FaleMais 30',
+                'time': 30,
+                'unitTime': 'minutes',
+                'rateException': 10
+            },
+            {
+                'name': 'FaleMais 60',
+                'time': 60,
+                'unitTime': 'minutes',
+                'rateException': 10
+            },
+            {
+                'name': 'FaleMais 120',
+                'time': 120,
+                'unitTime': 'minutes',
+                'rateException': 10
+            }
+        ],
+    },
+    {
         'model': 'Fee',
         'documents': [
             {

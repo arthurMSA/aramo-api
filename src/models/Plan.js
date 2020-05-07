@@ -11,6 +11,10 @@ const PlanSchema = mongoose.Schema({
     unitTime: {
         type: String,
         required: true
+    },
+    rateException: {
+        type: Number,
+        required: true
     }
 })
 
