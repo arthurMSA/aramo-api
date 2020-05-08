@@ -13,7 +13,7 @@ module.exports = app => {
         }
     })
     app.get(router+'/calculate', async (req, res) => {
-        const Plan = app.controllers.PlanControllerr
+        const Plan = app.controllers.PlanController
         res.send(await Plan.calculate(req.query))
     })
 }
