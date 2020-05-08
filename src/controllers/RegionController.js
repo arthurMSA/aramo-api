@@ -4,7 +4,7 @@ module.exports = {
         return await CRUD.create(fee)
     },
     findAll: async () => {
-        return await CRUD.findAll()
+        return await CRUD.findAll('name')
     },
     find: async(obj) => {
         return await CRUD.find(obj)

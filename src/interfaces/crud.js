@@ -10,16 +10,17 @@ module.exports = (nameModel) => {
                 console.error(error)
             }
         },
-        findAll: async () => {
+        findAll: async (sort=null) => {
             try {
-                return await Model.find({})
+                console.log(sort)
+                return await Model.find({}).sort(sort)
             } catch (error) {
                 console.error(error)
             }
         },
-        find: async (obj) => {
+        find: async (obj, sort) => {
             try {
-                return await Model.find(obj)
+                return await Model.find(obj).sort()
             } catch (error) {
                 console.error(error)
             }
