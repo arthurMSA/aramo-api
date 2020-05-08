@@ -29,7 +29,9 @@ module.exports = {
                     withoutPlan: time*feePrice 
                 })
             })
+            return {error: false, data: values}
+          } else {
+            return {error: true, message:'A Aramo não cobre este tipo de ligação'}
           }
-          return values
         }
     }
