@@ -47,9 +47,35 @@ module.exports = [
            },
            {
                 'price': 0.90,
+                'origin': '011',
+                'destination': '018'
+            },
+            {
+                'price': 1.90,
                 'origin': '018',
                 'destination': '011'
-           }
+           },
+           {
+                'price': 0,
+                'origin': '017',
+                'destination': '017'
+           },
+           {
+                'price': 0,
+                'origin': '016',
+                'destination': '016'
+            },
+            {
+                'price': 0,
+                'origin': '018',
+                'destination': '018'
+           },
+           {
+                'price': 0,
+                'origin': '011',
+                'destination': '011'
+            }
+
         ]
     },
     {
