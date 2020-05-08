@@ -6,10 +6,7 @@ module.exports = app => {
     })
     app.get(router, async (req, res) => {
         const Region = app.controllers.RegionController
-        if(req.params) {
-            res.send(await Region.find(req.query))
-        } else {
-            res.send(await Region.findAll())
-        }
+        res.send(await Region.findAll())
+
     })
 }
