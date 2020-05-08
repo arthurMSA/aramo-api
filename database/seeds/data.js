@@ -26,7 +26,7 @@ module.exports = [
         'model': 'Fee',
         'documents': [
             {
-                'price': 1.20,
+                'price': 1.90,
                 'origin': '011',
                 'destination': '016'
            },
